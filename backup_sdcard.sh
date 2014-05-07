@@ -17,5 +17,5 @@ sudo fsck.ext4 -vfp $ROOT_DEVICE
 IMAGE_NAME=`date +"%Y%m%d"`".img.xz"
 echo
 echo "copying $CARD_DEVICE to $IMAGE_NAME..."
-sudo dd if=$CARD_DEVICE bs=4M | xz --best --threads=4 -v > $IMAGE_NAME
+sudo dd if=$CARD_DEVICE bs=4M | xz --fast --threads=6 -v > $IMAGE_NAME
 
